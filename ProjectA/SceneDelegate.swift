@@ -5,6 +5,7 @@
 //  Created by Bilgehan ISIKLI on 7/11/22.
 //
 
+import SwiftUI
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -15,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     if let windowScene = scene as? UIWindowScene {
       let window = UIWindow(windowScene: windowScene)
-      window.rootViewController = UINavigationController(rootViewController: PACityListViewController())
+      window.rootViewController = UIHostingController(rootView: PACityListView())
       self.window = window
       window.makeKeyAndVisible()
   }
