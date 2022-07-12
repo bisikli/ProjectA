@@ -15,7 +15,10 @@ struct PAWeeklyWeatherForecast: Identifiable {
 
 struct PAWeeklyWeatherForecastData : Codable {
   struct PAWeatherForecast: Codable {
+    let name: String
     let temperature: Float
+    let icon: String
+    let shortForecast: String
   }
   let periods: [PAWeatherForecast]
 }

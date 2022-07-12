@@ -16,8 +16,25 @@ struct PACityListView: View {
     } else {
       List {
         ForEach(forecastProvider.cityForecasts) { cityForecast in
-          Color.orange
+          PACityListItemView(cityWeather: cityForecast)
         }
+      }
+    }
+  }
+}
+
+struct PACityListItemView: View {
+  let cityWeather: PAWeeklyWeatherForecast
+  var body: some View {
+    let periodData = cityWeather.data.periods.first!
+    return HStack {
+      Text(cityWeather.city)
+      Spacer()
+      HStack {
+        Text(periodData.shortForecast)
+        Text("\(Int(periodData.temperature))")
+        AsyncImage(url: URL(string: periodData.icon)!)
+          .clipShape(Circle())
       }
     }
   }
