@@ -14,26 +14,23 @@ struct PACityListView: View {
     if let error = forecastProvider.error {
       Text("\(error.localizedDescription)")
     } else {
-      List {
-        ForEach(forecastProvider.cityForecasts) { cityForecast in
-          PACityListItemView(cityWeather: cityForecast)
-        }
+      List(forecastProvider.cityForecasts, children: \.week) { weather in
+        PACityListItemView(cityWeather: weather)
       }
     }
   }
 }
 
 struct PACityListItemView: View {
-  let cityWeather: PAWeeklyWeatherForecast
+  let cityWeather: PAWeatherForecast
   var body: some View {
-    let periodData = cityWeather.data.periods.first!
     return HStack {
       Text(cityWeather.city)
       Spacer()
       HStack {
-        Text(periodData.shortForecast)
-        Text("\(Int(periodData.temperature))")
-        AsyncImage(url: URL(string: periodData.icon)!)
+        Text(cityWeather.data.shortForecast)
+        Text("\(Int(cityWeather.data.temperature))")
+        AsyncImage(url: URL(string: cityWeather.data.icon)!)
           .clipShape(Circle())
       }
     }

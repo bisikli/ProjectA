@@ -7,18 +7,21 @@
 
 import Foundation
 
-struct PAWeeklyWeatherForecast: Identifiable {
-  var id: String { return city }
-  let city: String
-  let data: PAWeeklyWeatherForecastData
+struct PAWeatherForecastData: Codable {
+  let name: String
+  let temperature: Float
+  let icon: String
+  let shortForecast: String
 }
 
 struct PAWeeklyWeatherForecastData : Codable {
-  struct PAWeatherForecast: Codable {
-    let name: String
-    let temperature: Float
-    let icon: String
-    let shortForecast: String
-  }
-  let periods: [PAWeatherForecast]
+  let periods: [PAWeatherForecastData]
 }
+
+struct PAWeatherForecast: Identifiable {
+  var id: String { return city }
+  let city: String
+  let data: PAWeatherForecastData
+  let week: [PAWeatherForecast]?
+}
+

@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 class PAWeatherProvider: ObservableObject {
-  @Published var cityForecasts = [PAWeeklyWeatherForecast]()
+  @Published var cityForecasts = [PAWeatherForecast]()
   @Published var error: Error?
   
   private let client = PAWeatherClient()

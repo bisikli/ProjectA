@@ -22,9 +22,12 @@ class PAWeatherClient {
     let properties: NWSAPIData
   }
   
-  func fetchDefaultCities() -> AnyPublisher<[PAWeeklyWeatherForecast], Error> {
+  func fetchDefaultCities() -> AnyPublisher<[PAWeatherForecast], Error> {
     let publishers = PACity.allCases.publisher.flatMap { city in
-      return self.fetchCityData(location: city.location).flatMap({self.fetchWeatherData(cityData: $0)}).map({ PAWeeklyWeatherForecast(city: city.rawValue, data: $0)})
+      return self.fetchCityData(location: city.location)
+        .flatMap({ self.fetchWeatherData(cityData: $0) })
+        .map({ PAWeatherForecast(city: city.rawValue, data: $0.periods.first!, week: $0.periods
+          .map({ PAWeatherForecast(city: city.rawValue, data: $0, week:[]) }))})
     }
     return Publishers.MergeMany(publishers).collect().eraseToAnyPublisher()
   }
