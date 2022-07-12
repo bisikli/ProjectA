@@ -23,7 +23,6 @@ struct PACityListView: View {
   }
 }
 
-
 struct PACityListView_Previews: PreviewProvider {
   static var previews: some View {
     PACityListView()

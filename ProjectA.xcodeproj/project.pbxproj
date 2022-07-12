@@ -16,6 +16,9 @@
 		C6827F33287CD6A600078791 /* ProjectAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F32287CD6A600078791 /* ProjectAUITestsLaunchTests.swift */; };
 		C6827F42287CD9BF00078791 /* PACityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F41287CD9BF00078791 /* PACityListView.swift */; };
 		C6827F44287CDD8300078791 /* PAWeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F43287CDD8300078791 /* PAWeatherClient.swift */; };
+		C6827F48287CF0A400078791 /* PAWeeklyWeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */; };
+		C6827F4A287CF10B00078791 /* PAWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F49287CF10B00078791 /* PAWeatherProvider.swift */; };
+		C6827F4C287CF93D00078791 /* PACity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F4B287CF93D00078791 /* PACity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C6827F32287CD6A600078791 /* ProjectAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C6827F41287CD9BF00078791 /* PACityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACityListView.swift; sourceTree = "<group>"; };
 		C6827F43287CDD8300078791 /* PAWeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherClient.swift; sourceTree = "<group>"; };
+		C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeeklyWeatherForecast.swift; sourceTree = "<group>"; };
+		C6827F49287CF10B00078791 /* PAWeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherProvider.swift; sourceTree = "<group>"; };
+		C6827F4B287CF93D00078791 /* PACity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +136,8 @@
 		C6827F3F287CD7E100078791 /* ProjectACore */ = {
 			isa = PBXGroup;
 			children = (
-				C6827F43287CDD8300078791 /* PAWeatherClient.swift */,
+				C6827F46287CF08F00078791 /* Model */,
+				C6827F45287CF08200078791 /* Network */,
 			);
 			path = ProjectACore;
 			sourceTree = "<group>";
@@ -141,6 +148,24 @@
 				C6827F41287CD9BF00078791 /* PACityListView.swift */,
 			);
 			path = ProjectAUI;
+			sourceTree = "<group>";
+		};
+		C6827F45287CF08200078791 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C6827F43287CDD8300078791 /* PAWeatherClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C6827F46287CF08F00078791 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */,
+				C6827F49287CF10B00078791 /* PAWeatherProvider.swift */,
+				C6827F4B287CF93D00078791 /* PACity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +300,11 @@
 			files = (
 				C6827F10287CD6A400078791 /* AppDelegate.swift in Sources */,
 				C6827F42287CD9BF00078791 /* PACityListView.swift in Sources */,
+				C6827F4A287CF10B00078791 /* PAWeatherProvider.swift in Sources */,
+				C6827F4C287CF93D00078791 /* PACity.swift in Sources */,
 				C6827F12287CD6A400078791 /* SceneDelegate.swift in Sources */,
 				C6827F44287CDD8300078791 /* PAWeatherClient.swift in Sources */,
+				C6827F48287CF0A400078791 /* PAWeeklyWeatherForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
