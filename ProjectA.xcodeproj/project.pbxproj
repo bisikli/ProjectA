@@ -16,9 +16,13 @@
 		C6827F33287CD6A600078791 /* ProjectAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F32287CD6A600078791 /* ProjectAUITestsLaunchTests.swift */; };
 		C6827F42287CD9BF00078791 /* PACityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F41287CD9BF00078791 /* PACityListView.swift */; };
 		C6827F44287CDD8300078791 /* PAWeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F43287CDD8300078791 /* PAWeatherClient.swift */; };
-		C6827F48287CF0A400078791 /* PAWeeklyWeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */; };
-		C6827F4A287CF10B00078791 /* PAWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F49287CF10B00078791 /* PAWeatherProvider.swift */; };
+		C6827F48287CF0A400078791 /* PAWeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F47287CF0A400078791 /* PAWeatherForecast.swift */; };
+		C6827F4A287CF10B00078791 /* PAWeatherForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F49287CF10B00078791 /* PAWeatherForecastProvider.swift */; };
 		C6827F4C287CF93D00078791 /* PACity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F4B287CF93D00078791 /* PACity.swift */; };
+		C6827F4E287E52C200078791 /* PACityListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F4D287E52C200078791 /* PACityListItemView.swift */; };
+		C6827F50287E531200078791 /* PAWeatherUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F4F287E531200078791 /* PAWeatherUnit.swift */; };
+		C6827F52287E535100078791 /* PAWeatherForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F51287E535100078791 /* PAWeatherForecastData.swift */; };
+		C6827F54287E53B000078791 /* PAWeeklyWeatherForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6827F53287E53B000078791 /* PAWeeklyWeatherForecastData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +56,13 @@
 		C6827F32287CD6A600078791 /* ProjectAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C6827F41287CD9BF00078791 /* PACityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACityListView.swift; sourceTree = "<group>"; };
 		C6827F43287CDD8300078791 /* PAWeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherClient.swift; sourceTree = "<group>"; };
-		C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeeklyWeatherForecast.swift; sourceTree = "<group>"; };
-		C6827F49287CF10B00078791 /* PAWeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherProvider.swift; sourceTree = "<group>"; };
+		C6827F47287CF0A400078791 /* PAWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherForecast.swift; sourceTree = "<group>"; };
+		C6827F49287CF10B00078791 /* PAWeatherForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherForecastProvider.swift; sourceTree = "<group>"; };
 		C6827F4B287CF93D00078791 /* PACity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACity.swift; sourceTree = "<group>"; };
+		C6827F4D287E52C200078791 /* PACityListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACityListItemView.swift; sourceTree = "<group>"; };
+		C6827F4F287E531200078791 /* PAWeatherUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherUnit.swift; sourceTree = "<group>"; };
+		C6827F51287E535100078791 /* PAWeatherForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeatherForecastData.swift; sourceTree = "<group>"; };
+		C6827F53287E53B000078791 /* PAWeeklyWeatherForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAWeeklyWeatherForecastData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C6827F41287CD9BF00078791 /* PACityListView.swift */,
+				C6827F4D287E52C200078791 /* PACityListItemView.swift */,
 			);
 			path = ProjectAUI;
 			sourceTree = "<group>";
@@ -161,9 +170,12 @@
 		C6827F46287CF08F00078791 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C6827F47287CF0A400078791 /* PAWeeklyWeatherForecast.swift */,
-				C6827F49287CF10B00078791 /* PAWeatherProvider.swift */,
 				C6827F4B287CF93D00078791 /* PACity.swift */,
+				C6827F47287CF0A400078791 /* PAWeatherForecast.swift */,
+				C6827F51287E535100078791 /* PAWeatherForecastData.swift */,
+				C6827F49287CF10B00078791 /* PAWeatherForecastProvider.swift */,
+				C6827F4F287E531200078791 /* PAWeatherUnit.swift */,
+				C6827F53287E53B000078791 /* PAWeeklyWeatherForecastData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,11 +312,15 @@
 			files = (
 				C6827F10287CD6A400078791 /* AppDelegate.swift in Sources */,
 				C6827F42287CD9BF00078791 /* PACityListView.swift in Sources */,
-				C6827F4A287CF10B00078791 /* PAWeatherProvider.swift in Sources */,
+				C6827F4A287CF10B00078791 /* PAWeatherForecastProvider.swift in Sources */,
+				C6827F4E287E52C200078791 /* PACityListItemView.swift in Sources */,
+				C6827F52287E535100078791 /* PAWeatherForecastData.swift in Sources */,
 				C6827F4C287CF93D00078791 /* PACity.swift in Sources */,
+				C6827F50287E531200078791 /* PAWeatherUnit.swift in Sources */,
 				C6827F12287CD6A400078791 /* SceneDelegate.swift in Sources */,
 				C6827F44287CDD8300078791 /* PAWeatherClient.swift in Sources */,
-				C6827F48287CF0A400078791 /* PAWeeklyWeatherForecast.swift in Sources */,
+				C6827F48287CF0A400078791 /* PAWeatherForecast.swift in Sources */,
+				C6827F54287E53B000078791 /* PAWeeklyWeatherForecastData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

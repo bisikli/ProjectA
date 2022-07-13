@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-class PAWeatherProvider: ObservableObject {
+class PAWeatherForecastProvider: ObservableObject {
   @Published var cityForecasts = [PAWeatherForecast]()
   @Published var error: Error?
   

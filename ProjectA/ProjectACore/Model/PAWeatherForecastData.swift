@@ -1,33 +1,18 @@
 //
-//  PAWeeklyWeatherForecast.swift
+//  PAWeatherForecastData.swift
 //  ProjectA
 //
-//  Created by Bilgehan ISIKLI on 7/11/22.
+//  Created by Bilgehan ISIKLI on 7/12/22.
 //
 
 import Foundation
-
-enum PAWeatherUnit {
-  case F
-  case C
-}
 
 struct PAWeatherForecastData: Codable {
   let name: String
   let temperature: Float
   let icon: String
   let shortForecast: String
-}
-
-struct PAWeeklyWeatherForecastData : Codable {
-  let periods: [PAWeatherForecastData]
-}
-
-struct PAWeatherForecast: Identifiable {
-  var id: String { return city + "-" + data.name }
-  let city: String
-  let data: PAWeatherForecastData
-  let week: [PAWeatherForecast]?
+  let detailedForecast: String
 }
 
 extension PAWeatherForecastData {

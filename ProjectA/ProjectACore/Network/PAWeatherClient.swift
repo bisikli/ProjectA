@@ -16,8 +16,6 @@ enum PAWeatherFetchingError: Error, LocalizedError {
 
 class PAWeatherClient {
   
-  private var disposeBag = Set<AnyCancellable>()
-  
   internal struct PAWeatherClientContainer<NWSAPIData: Codable>: Codable {
     let properties: NWSAPIData
   }
