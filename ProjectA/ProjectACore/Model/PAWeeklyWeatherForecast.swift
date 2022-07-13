@@ -24,7 +24,7 @@ struct PAWeeklyWeatherForecastData : Codable {
 }
 
 struct PAWeatherForecast: Identifiable {
-  var id: String { return city }
+  var id: String { return city + "-" + data.name }
   let city: String
   let data: PAWeatherForecastData
   let week: [PAWeatherForecast]?

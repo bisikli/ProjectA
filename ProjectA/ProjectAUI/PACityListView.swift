@@ -19,9 +19,10 @@ struct PACityListView: View {
         PACityListItemView(cityWeather: weather, preferredUnit: preferFahreneight ? .F : .C)
       }.overlay(alignment: .bottomTrailing) {
         HStack {
+          let preferredUnit = "\(preferFahreneight ? "°F" : "°C")"
           Spacer()
-          Text("Unit :\(preferFahreneight ? "°F" : "°C")")
-          Toggle("Unit :\(preferFahreneight ? "°F" : "°C")", isOn: $preferFahreneight).labelsHidden()
+          Text(preferredUnit)
+          Toggle(preferredUnit, isOn: $preferFahreneight).labelsHidden()
         }
       }
     }
@@ -33,14 +34,16 @@ struct PACityListItemView: View {
   let preferredUnit: PAWeatherUnit
   var body: some View {
     return HStack {
-      Text(cityWeather.city)
-      Spacer()
-      HStack {
-        Text(cityWeather.data.shortForecast)
-        Text(cityWeather.data.description(unit: preferredUnit))
-        AsyncImage(url: URL(string: cityWeather.data.icon)!)
-          .clipShape(Circle())
+      VStack(alignment: .leading) {
+        Text(cityWeather.city).font(.title3)
+        Text(cityWeather.data.name).font(.caption)
       }
+      Spacer()
+      Text(cityWeather.data.description(unit: preferredUnit)).font(.body)
+      AsyncImage(url: URL(string: cityWeather.data.icon)!)
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 50.0, height: 50.0)
+        .clipShape(Circle())
     }
   }
 }

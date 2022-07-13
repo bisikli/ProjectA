@@ -26,8 +26,9 @@ class PAWeatherClient {
     let publishers = PACity.allCases.publisher.flatMap { city in
       return self.fetchCityData(location: city.location)
         .flatMap({ self.fetchWeatherData(cityData: $0) })
-        .map({ PAWeatherForecast(city: city.rawValue, data: $0.periods.first!, week: $0.periods
-          .map({ PAWeatherForecast(city: city.rawValue, data: $0, week:[]) }))})
+        .map({ PAWeatherForecast(city: city.rawValue,
+                                 data: $0.periods.first!,
+                                 week: $0.periods.map({ PAWeatherForecast(city: city.rawValue, data: $0, week:nil) }))})
     }
     return Publishers.MergeMany(publishers).collect().eraseToAnyPublisher()
   }
