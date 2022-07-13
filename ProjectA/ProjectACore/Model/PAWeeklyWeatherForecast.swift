@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum PAWeatherUnit {
+  case F
+  case C
+}
+
 struct PAWeatherForecastData: Codable {
   let name: String
   let temperature: Float
@@ -25,3 +30,14 @@ struct PAWeatherForecast: Identifiable {
   let week: [PAWeatherForecast]?
 }
 
+extension PAWeatherForecastData {
+  func description(unit: PAWeatherUnit) -> String {
+    switch unit {
+    case .F:
+      return "\(Int(temperature)) °F"
+    case .C:
+      // Approximately ~
+      return "\(Int((temperature - 30)/2)) °C"
+    }
+  }
+}
