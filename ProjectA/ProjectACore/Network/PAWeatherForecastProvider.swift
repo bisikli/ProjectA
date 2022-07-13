@@ -15,6 +15,9 @@ class PAWeatherForecastProvider: ObservableObject {
   private let client = PAWeatherClient()
   private var fetchHandle: AnyCancellable?
   init () {
+    self.fetch()
+  }
+  func fetch() {
     fetchHandle = client.fetchDefaultCities()
       .receive(on: DispatchQueue.main)
       .sink(receiveCompletion: { [weak self] completion in

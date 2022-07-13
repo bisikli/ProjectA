@@ -163,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C6827F43287CDD8300078791 /* PAWeatherClient.swift */,
+				C6827F49287CF10B00078791 /* PAWeatherForecastProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 				C6827F4B287CF93D00078791 /* PACity.swift */,
 				C6827F47287CF0A400078791 /* PAWeatherForecast.swift */,
 				C6827F51287E535100078791 /* PAWeatherForecastData.swift */,
-				C6827F49287CF10B00078791 /* PAWeatherForecastProvider.swift */,
 				C6827F4F287E531200078791 /* PAWeatherUnit.swift */,
 				C6827F53287E53B000078791 /* PAWeeklyWeatherForecastData.swift */,
 			);

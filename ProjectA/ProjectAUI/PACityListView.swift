@@ -22,7 +22,11 @@ struct PACityListView: View {
       } else {
         List(forecastProvider.cityForecasts, children: \.week) { weather in
           PACityListItemView(cityWeather: weather, preferredUnit: preferFahreneight ? .F : .C)
-        }.overlay(alignment: .bottomTrailing) {
+        }
+        .refreshable {
+          forecastProvider.fetch()
+        }
+        .overlay(alignment: .bottomTrailing) {
           HStack {
             let preferredUnit = "\(preferFahreneight ? "°F" : "°C")"
             Spacer()
